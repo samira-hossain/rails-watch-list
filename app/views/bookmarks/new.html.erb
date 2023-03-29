@@ -1,0 +1,6 @@
+<%= form_with model: @bookmark, url: bookmarks_path, method: :post do |form| %>
+  <%= form.label :comment %>
+  <%= form.text_field :comment %>
+
+  <%= form.submit "Create Bookmark" %>
+<% end %>
