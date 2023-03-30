@@ -1,6 +1,14 @@
-<%= form_with model: @bookmark, url: bookmarks_path, method: :post do |form| %>
+<%= form_with model: @bookmark do |f| %>
+  <%= form.label :movie_id %>
+  <%= form.collection_select :movie_id, Movie.all, :id, :title %>
   <%= form.label :comment %>
-  <%= form.text_field :comment %>
+  <%= form.text_area :comment %>
+<% end %>
 
-  <%= form.submit "Create Bookmark" %>
+<%= link_to "Back to List", @list %>
+
+
+<%= simple_form_for(list) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
 <% end %>

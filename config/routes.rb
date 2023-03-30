@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # As a user, I can destroy a bookmark
 
   # root "articles#index"
-  resources :lists, only: [:index, :show, :new, :create, :destroy ]
-  resources :bookmarks
+  resources :lists, only: [:index, :show, :new, :create, :destroy] do
+    resources :bookmarks, only: [:new, :create]
+  end
+  resources :bookmarks, only: [:destroy]
 end
