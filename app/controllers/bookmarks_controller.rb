@@ -1,6 +1,4 @@
 class BookmarksController < ApplicationController
-  # before_action :set_bookmark, only: [:destroy]
-  # before_action :set_list, only: [:new, :create]
   before_action :set_list, only: [:create]
   before_action :set_bookmark, only: [:destroy]
 
