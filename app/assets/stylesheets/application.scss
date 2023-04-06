@@ -10,3 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.card-category {
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+}
